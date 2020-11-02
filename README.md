@@ -14,6 +14,11 @@ Para ejecutar el proyecto hay que instalar los modulos:
 		npm install
 	Levantar el proyecto Angular
 		ng serve
-		
+
+Ademas, hay que crear el archivo (/database/mongo.js) donde hay que incluir:
+	module.exports = {
+		db: "<URL-MongoDB>"
+	}
+
 El proyecto se accede por el puerto 4200 y a la API por el puerto 3000
 	
