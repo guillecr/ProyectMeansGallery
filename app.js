@@ -8,7 +8,6 @@ var multer = require('multer');
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var galleryRouter = require('./routes/gallery');
 
 
@@ -45,7 +44,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Establecemos los Enrutamientos
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/gallery', galleryRouter);
 // [END] EXPRESS
 

@@ -8,4 +8,4 @@ var GallerySchema = new mongoose.Schema({
   uploaded: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Gallery', GallerySchema);
+module.exports = mongoose.model('Gallery', GallerySchema); // No se, MongoDB cambia la colección de Gallery a galleries 
