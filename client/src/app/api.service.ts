@@ -38,6 +38,12 @@ export class ApiService {
   }
   //[END]
 
+  getGallery(): Observable<any> {
+    return this.http.get<Gallery>(apiUrl).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   //[STAR] Metodo de añadir foto
   addGallery(gallery: Gallery, file: File): Observable<any> { // Los obtenemos del Front
     // Montamos nuestros datos que enviaremos en una clase formData. Con la función .append() vamos añadiendo mas elementos

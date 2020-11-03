@@ -24,7 +24,7 @@ export class GalleryDetailsComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
-  
+
   ngOnInit(): void{
     this.getGalleryDetails(this.route.snapshot.paramMap.get('id')); // Obtenemos la ID
   }

@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Valida
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
+import { Gallery } from '../gallery';
 
 /*
 * No  es habitual pero en un mismo archivo se puede tener 2 o mas clases. En java igual pero no es habitual.
@@ -76,5 +77,9 @@ export class GalleryComponent implements OnInit {
         console.log(err);
         this.isLoadingResults = false;
       });
+  }
+
+  testGet(): void{
+    this.router.navigate(['/gallery-all']);
   }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryDetailsComponent } from './gallery-details/gallery-details.component';
+import { GalleryAllComponent } from './gallery-all/gallery-all.component';
 
 
 // Reglas de enrutamiento
@@ -18,6 +19,10 @@ const routes: Routes = [
     path:'',
     redirectTo:'/gallery',
     pathMatch:'full'
+  },{
+    path:'gallery-all',
+    component:GalleryAllComponent,
+    data:{title:'All'}
   }
 ];
 

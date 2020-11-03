@@ -77,4 +77,14 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+/**
+ * Me devuelve todos los documentos en una lista
+ */
+router.get('/', function(req,res,next) {
+  Gallery.find(function(err,gallery){
+    if(err) return next(err);
+    res.json(gallery);
+  })
+})
+
 module.exports = router;
