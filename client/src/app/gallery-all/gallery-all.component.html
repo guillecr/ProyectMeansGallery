@@ -1,27 +1,16 @@
-<a [routerLink]="['/gallery']"><h3>Upload again!</h3></a>
+<a [routerLink]="['/gallery']"><h2>Upload again!</h2></a>
 <!-- Carta principal -->
-<mat-card class="example-card">
-  <!-- Fila de nombre -->
-  <mat-card-header>
-    <mat-card-title>{{gallery[0].imageTitle}}</mat-card-title>
-  </mat-card-header>
-  <!-- Imagen -->
-  <img mat-card-image src="{{gallery[0].imageUrl}}" alt="Photo of a Shiba Inu">
-  <!-- Descripción-->
-  <mat-card-content>
-    <p>{{gallery[0].imageDesc}}</p>
-  </mat-card-content>
-</mat-card>
-<br>
-<mat-card class="example-card">
+<div id=documento *ngFor="let element of gallery">
+  <mat-card class="example-card" style="float: left;width: 40%;margin: 10px;height: 300px;">
     <!-- Fila de nombre -->
-    <mat-card-header>
-      <mat-card-title>{{gallery[1].imageTitle}}</mat-card-title>
+    <mat-card-header >
+      <mat-card-title>{{element.imageTitle}}</mat-card-title>
     </mat-card-header>
     <!-- Imagen -->
-    <img mat-card-image src="{{gallery[1].imageUrl}}" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="{{element.imageUrl}}" alt="Photo of a Shiba Inu" style="height: 75%;" >
     <!-- Descripción-->
     <mat-card-content>
-      <p>{{gallery[1].imageDesc}}</p>
+      <p>{{element.imageDesc}}</p>
     </mat-card-content>
   </mat-card>
+</div>

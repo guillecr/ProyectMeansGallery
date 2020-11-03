@@ -1,5 +1,5 @@
 <div class="example-container mat-elevation-z8">
-  <h2>Add Gallery</h2>
+  <h2 style="padding-left: 5px;">Add Gallery</h2>
   <div class="example-loading-shade"
         *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -43,10 +43,10 @@
 
       <!-- Botón de subir -->
       <div class="button-row">
-        <button type="submit" mat-flat-button color="primary"><mat-icon>upgrade</mat-icon></button>
+        <button type="submit" mat-flat-button color="primary" style="float: left;"><mat-icon>upgrade</mat-icon></button>  
       </div>
     </form>
-    
+    <button mat-flat-button color='primary' (click)="testGet()"><mat-icon>star</mat-icon></button>
   </mat-card>
-  <button mat-flat-button color='primary' (click)="testGet()"><mat-icon>star</mat-icon></button>
+  
 </div>

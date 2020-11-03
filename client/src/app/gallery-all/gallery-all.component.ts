@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 import { Gallery } from '../gallery';
 
@@ -10,7 +9,7 @@ import { Gallery } from '../gallery';
 })
 export class GalleryAllComponent implements OnInit {
   isLoadingResults = true;
-  gallery: Gallery = { _id: '', imageUrl: '', imageTitle: '', imageDesc: '', uploaded: null };
+  gallery: Gallery[] = [{ _id: '', imageUrl: '', imageTitle: '', imageDesc: '', uploaded: null }];
   constructor(
     private api: ApiService // Para la petición
   ) { }
