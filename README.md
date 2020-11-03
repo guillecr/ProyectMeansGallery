@@ -5,6 +5,7 @@ almacenará la imagen en el servidor y añadira la URL con la URL el titulo y un
 la imagen en una base de datos MongoDB.
 
 Para ejecutar el proyecto hay que instalar los modulos:
+
 	- En la raiz del proyecto Express (/):
 		npm install
 	Levantar el proyecto:
@@ -16,6 +17,7 @@ Para ejecutar el proyecto hay que instalar los modulos:
 		ng serve
 
 Ademas, hay que crear el archivo (/database/mongo.js) donde hay que incluir:
+
 	module.exports = {
 		db: "<URL-MongoDB>"
 	}
